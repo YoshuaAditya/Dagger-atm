@@ -1,10 +1,12 @@
 package com.example.dagger
 
 import android.widget.TextView
-import com.example.dagger.CommandRouter
 import java.util.*
+import javax.inject.Inject
 
-class CommandRouter (private val output: TextView){
+
+class CommandRouter @Inject constructor(){
+    lateinit var output: TextView
     private val commands: Map<String, Command> = Collections.emptyMap()
     fun route(input: String): Command.Status {
         val splitInput = split(input)

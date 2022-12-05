@@ -14,11 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        //after succesful build/install, the DaggerCommandRouter error should be gone
+        val commandRouterFactory: CommandRouterFactory = DaggerCommandRouterFactory.create()
         editText=findViewById(R.id.command_line)
         button=findViewById(R.id.button)
         output=findViewById(R.id.output)
-        val commandRouter = CommandRouter(output)
+        val commandRouter = commandRouterFactory.router()
+        commandRouter.output=output
         button.setOnClickListener{commandRouter.route(editText.text.toString())}
 
     }
