@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var button: Button
     lateinit var button_login:Button
     lateinit var button_deposit:Button
+    lateinit var button_withdraw:Button
     lateinit var output: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +25,14 @@ class MainActivity : AppCompatActivity() {
         button=findViewById(R.id.button)
         button_deposit=findViewById(R.id.button_deposit)
         button_login=findViewById(R.id.button_login)
+        button_withdraw=findViewById(R.id.button_withdraw)
         output=findViewById(R.id.output)
         val commandRouter = commandRouterFactory.router()
         commandRouter.output=output
         button.setOnClickListener{commandRouter.route(editText.text.toString())}
         button_deposit.setOnClickListener{editText.setText("deposit 100")}
         button_login.setOnClickListener{editText.setText("login user")}
+        button_withdraw.setOnClickListener{editText.setText("withdraw 40")}
 
     }
 }

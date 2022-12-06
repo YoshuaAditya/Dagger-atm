@@ -40,5 +40,13 @@ class Database @Inject constructor() {
     fun deposit(value: BigDecimal) {
       balance+=value
     }
+
+    fun withdraw(value: BigDecimal) :Boolean{
+      if(balance>value) {
+        balance -= value
+        return true
+      }
+      return false
+    }
   }
 }
