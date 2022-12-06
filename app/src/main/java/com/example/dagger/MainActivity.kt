@@ -5,7 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.set
+import com.example.dagger.command.CommandRouterFactory
 
 class MainActivity : AppCompatActivity() {
     lateinit var editText: EditText

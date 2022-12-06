@@ -1,7 +1,6 @@
-package com.example.dagger
+package com.example.dagger.command
 
 import android.widget.TextView
-import java.util.*
 import javax.inject.Inject
 
 //To inject Map, need the @JvmSuppressWildcards to workaround error provides

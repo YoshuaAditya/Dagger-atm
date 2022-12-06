@@ -1,4 +1,4 @@
-package com.example.dagger
+package com.example.dagger.command
 
 interface Command {
     /** Process the rest of the command's words and do something.  */

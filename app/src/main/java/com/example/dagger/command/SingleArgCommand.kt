@@ -1,4 +1,4 @@
-package com.example.dagger
+package com.example.dagger.command
 
 abstract class SingleArgCommand : Command {
   override fun handleInput(input: List<String>): Pair<Command.Status,String> {

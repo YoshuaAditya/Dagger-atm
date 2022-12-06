@@ -1,5 +1,7 @@
-package com.example.dagger
+package com.example.dagger.command
 
+import com.example.dagger.Database
+import com.example.dagger.Outputter
 import java.math.BigDecimal
 import javax.inject.Inject
 

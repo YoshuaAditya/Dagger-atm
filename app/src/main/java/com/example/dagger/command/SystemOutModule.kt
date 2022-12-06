@@ -1,5 +1,6 @@
-package com.example.dagger
+package com.example.dagger.command
 
+import com.example.dagger.Outputter
 import dagger.Module
 import dagger.Provides
 
