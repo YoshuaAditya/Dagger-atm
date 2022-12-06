@@ -1,10 +1,8 @@
 package com.example.dagger
 
 interface Command {
-    fun key(): String
-
     /** Process the rest of the command's words and do something.  */
-    fun handleInput(input: List<String>): Status
+    fun handleInput(input: List<String>): Pair<Status,String>
 
     enum class Status {
         INVALID, HANDLED

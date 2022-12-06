@@ -7,7 +7,7 @@ import dagger.multibindings.StringKey
 
 
 @Module
-internal abstract class HelloWorldModule {
+abstract class HelloWorldModule {
     @Binds
     @IntoMap
     @StringKey("hello")

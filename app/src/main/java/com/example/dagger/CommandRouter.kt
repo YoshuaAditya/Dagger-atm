@@ -16,8 +16,7 @@ class CommandRouter @Inject constructor(private val commands: @JvmSuppressWildca
         }
         val commandKey = splitInput[0]
         val command = commands[commandKey] ?: return invalidCommand(input)
-        val status: Command.Status = command.handleInput(splitInput.subList(1, splitInput.size))
-        val textOutput=commandKey+ " command recognized"
+        val (status: Command.Status,textOutput:String) = command.handleInput(splitInput.subList(1, splitInput.size))
         output.text=textOutput
         return status
     }

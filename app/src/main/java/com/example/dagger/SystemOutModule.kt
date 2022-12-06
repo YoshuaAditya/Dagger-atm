@@ -8,8 +8,9 @@ class SystemOutModule {
   @Provides
   fun textOutputter(): Outputter {
     return object : Outputter {
-      override fun output(output: String) {
-        println(output)
+      override fun output(output: String) :String{
+        //println(output)
+        return output
       }
     }
   }
