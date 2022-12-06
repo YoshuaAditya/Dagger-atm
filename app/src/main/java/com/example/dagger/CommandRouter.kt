@@ -4,14 +4,10 @@ import android.widget.TextView
 import java.util.*
 import javax.inject.Inject
 
+//To inject Map, need the @JvmSuppressWildcards to workaround error provides
+//More info: https://stackoverflow.com/questions/55669810/dagger-missingbinding-java-util-mapjava-lang-class-extends-viewmodel-provide/62260147#62260147
+class CommandRouter @Inject constructor(private val commands: @JvmSuppressWildcards Map<String, Command>) {
 
-class CommandRouter{
-    private val commands = mutableMapOf<String, Command>()
-
-    @Inject
-    constructor(command: Command) {
-        commands[command.key()] = command
-    }
     lateinit var output: TextView
     fun route(input: String): Command.Status {
         val splitInput = split(input)
