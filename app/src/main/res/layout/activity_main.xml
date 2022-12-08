@@ -11,6 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:gravity="center"
         android:autofillHints="Enter..."
         android:hint="Command"
         android:inputType="text"
@@ -51,43 +52,69 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:text="Available Commands:"
-        app:layout_constraintBottom_toTopOf="@id/button_login"
+        app:layout_constraintBottom_toTopOf="@id/flexbox_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="wrap_content"
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexbox_button"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/design_default_color_secondary"
-        android:text="Login"
+        android:layout_margin="10dp"
         app:layout_constraintBottom_toTopOf="@+id/command_line"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button_deposit"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.501" />
+        tools:layout_editor_absoluteX="10dp"
+        app:flexWrap="wrap"
+        app:alignItems="stretch"
+        app:alignContent="stretch">
 
-    <Button
-        android:id="@+id/button_deposit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Deposit"
-        android:backgroundTint="@color/design_default_color_secondary"
-        app:layout_constraintBottom_toTopOf="@+id/command_line"
-        app:layout_constraintEnd_toStartOf="@id/button_withdraw"
-        app:layout_constraintStart_toEndOf="@+id/button_login"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <Button
+            android:id="@+id/button_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="Hello" />
 
-    <Button
-        android:id="@+id/button_withdraw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Withdraw"
-        android:backgroundTint="@color/design_default_color_secondary"
-        app:layout_constraintBottom_toTopOf="@+id/command_line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_deposit"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/button_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="Deposit" />
+
+        <Button
+            android:id="@+id/button_withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="Withdraw" />
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="Logout" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="Testing flexbox layout" />
+    </com.google.android.flexbox.FlexboxLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

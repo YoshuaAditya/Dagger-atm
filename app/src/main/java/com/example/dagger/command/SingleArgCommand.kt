@@ -2,7 +2,11 @@ package com.example.dagger.command
 
 abstract class SingleArgCommand : Command {
   override fun handleInput(input: List<String>): Pair<Command.Status,String> {
-    return if (input.size == 1) handleArg(input[0]) else Pair(Command.Status.INVALID,"Hello World!")
+    return when(input.size){
+      0 -> handleArg("")
+      1 -> handleArg(input[0])
+      else -> Pair(Command.Status.INVALID,"Too much input")
+    }
   }
 
   fun isArgNumber(arg:String): Boolean{
