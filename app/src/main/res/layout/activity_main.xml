@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Submit"
+        android:text="SUBMIT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/command_line"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Hello" />
+            android:text="HELLO" />
 
         <Button
             android:id="@+id/button_login"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Login" />
+            android:text="LOGIN" />
 
         <Button
             android:id="@+id/button_deposit"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Deposit" />
+            android:text="DEPOSIT" />
 
         <Button
             android:id="@+id/button_withdraw"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Withdraw" />
+            android:text="WITHDRAW" />
 
         <Button
             android:id="@+id/button_logout"
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Logout" />
+            android:text="LOGOUT" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
